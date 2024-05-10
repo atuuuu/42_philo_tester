@@ -7,12 +7,19 @@ Run it with :
 
 Your Makefile must support CFLAGS environment variable :
 
+
 ...
+
 CFLAGS += -Wall -Wextra -Werror
+
 ...
+
 %.o: %.c
+
 	$(CC)  $(CFLAGS)...
+
 ...
+
 
 This way, my script can inject Makefile flags during compilation.
 It is also how makefile handles CFLAGS if you don't define neither CFLAGS nor '%.o:%.c' rule (these are implicitely defined by make).
