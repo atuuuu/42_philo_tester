@@ -1,7 +1,8 @@
 ### Philosopher tester
 
-Copy the tester.sh script in your project
-Run it with
+Copy the tester.sh script in your project.
+
+Run it with :
 ``bash tester.sh``
 
 Your Makefile must support CFLAGS environment variable :
