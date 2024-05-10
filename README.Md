@@ -24,5 +24,5 @@ CFLAGS += -Wall -Wextra -Werror
 ```
 
 
-This way, my script can inject Makefile flags during compilation.
+This way, my script can inject Makefile flags during compilation through the CFLAGS environment variable.
 It is also how makefile handles CFLAGS if you don't define neither CFLAGS nor '%.o:%.c' rule (these are implicitely defined by make).
