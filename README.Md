@@ -11,14 +11,14 @@ Your Makefile must support CFLAGS environment variable :
 Example makefile
 ```
 ...
-
-CFLAGS += -Wall -Wextra -Werror
+NAME = philo
+CFLAGS **+**= -Wall -Wextra -Werror
 
 ...
 
-%.o: %.c
+%.o: %.c:
 
-	$(CC)  $(CFLAGS)...
+	$(CC) -c $(CFLAGS) $< -o $@
 
 ...
 ```
