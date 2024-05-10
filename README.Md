@@ -8,7 +8,7 @@ Run it with :
 Your Makefile must support CFLAGS environment variable :
 
 
-Example makefile
+Example makefile (notice the += on the CFLAGS rule)
 ```
 ...
 NAME = philo
