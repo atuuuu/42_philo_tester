@@ -8,6 +8,8 @@ Run it with :
 Your Makefile must support CFLAGS environment variable :
 
 
+Example makefile
+```
 ...
 
 CFLAGS += -Wall -Wextra -Werror
@@ -19,6 +21,7 @@ CFLAGS += -Wall -Wextra -Werror
 	$(CC)  $(CFLAGS)...
 
 ...
+```
 
 
 This way, my script can inject Makefile flags during compilation.
