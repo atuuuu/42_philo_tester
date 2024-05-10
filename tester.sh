@@ -85,7 +85,7 @@ do
 	for i in {1..7}
 	do 
 		rm temp -f
-		LINE_COUNT=$(valgrind --quiet --tool=helgrind ./philo $args | tee temp | grep "is eating" | wc -l)
+		LINE_COUNT=$(valgrind --quiet --tool=helgrind --fair-sched=yes ./philo $args | tee temp | grep "is eating" | wc -l)
 		if [ ! $LINE_COUNT -ge $COUNT ] 
 		then 
 			printf '\033[031mKO\n\033[0m' 
@@ -102,7 +102,7 @@ do
 	for i in {1..7}
 	do 
 		rm temp -f
-		LINE_COUNT=$(valgrind --quiet --tool=drd ./philo $args | tee temp | grep "is eating" | wc -l)
+		LINE_COUNT=$(valgrind --quiet --tool=drd --fair-sched=yes ./philo $args | tee temp | grep "is eating" | wc -l)
 		if [ ! $LINE_COUNT -ge $COUNT ] 
 		then 
 			printf '\033[031mKO\n\033[0m' 
