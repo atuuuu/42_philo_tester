@@ -81,7 +81,7 @@ do
 	export CFLAGS="-g -Ofast"
 	make re --silent
 	
-	echo "valgrind --quiet --tool=helgrind ./philo $args"
+	echo "valgrind --quiet --tool=helgrind --fair-sched=yes ./philo $args"
 	for i in {1..7}
 	do 
 		rm temp -f
@@ -98,7 +98,7 @@ do
 	done
 	printf '\n'
 	
-	echo "valgrind --quiet --tool=drd ./philo $args"
+	echo "valgrind --quiet --tool=drd --fair-sched=yes ./philo $args"
 	for i in {1..7}
 	do 
 		rm temp -f
